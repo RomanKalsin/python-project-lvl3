@@ -13,5 +13,5 @@ def arg_parser():
     parse.add_argument('-o', '--output', default=home_dir,
                        metavar='OUTPUT', help=text_help)
     text_help_url = 'Specify the URL of the loaded page'
-    parse.add_argument('URL', help=text_help_url)
+    parse.add_argument('url', help=text_help_url)
     return parse.parse_args()
