@@ -11,7 +11,7 @@ def arg_parser():
     home_dir = os.getcwd()
     text_help = 'Specify the directory where the page is saved'
     parse.add_argument('-o', '--output', default=home_dir,
-                        metavar='OUTPUT', help=text_help)
+                       metavar='OUTPUT', help=text_help)
     text_help_url = 'Specify the URL of the loaded page'
     parse.add_argument('URL', help=text_help_url)
     return parse.parse_args()
