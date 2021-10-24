@@ -1,0 +1,16 @@
+name: Flake8
+on:
+  - push
+  - pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checks out your repository
+        uses: actions/checkout@v2
+      - name: Install poetry
+        run: pip install poetry
+      - name: Install project
+        run: make install
+      - name: Start linter
+        run: make lint
