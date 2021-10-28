@@ -2,10 +2,9 @@
 from page_loader import download
 import os
 import tempfile
-import time
 
 
-def facke_client():
+def facke_client(url):
     pass
 
 
