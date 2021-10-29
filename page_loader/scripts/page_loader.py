@@ -9,7 +9,7 @@ def main():
     args = arg_parser()
     path_dir = args.output
     url = args.url
-    download(url, path_dir)
+    print(download(url, path_dir))
 
 
 if __name__ == "__main__":
