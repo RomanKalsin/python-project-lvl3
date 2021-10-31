@@ -24,5 +24,5 @@ def test_download_create_file(requests_mock):
 def test_download_output(requests_mock):
     with tempfile.TemporaryDirectory(dir='tests') as temp_path:
         requests_mock.get('https://ru.hexlet.io/pages/recommended-books', text="test")
-        ansver = os.path.join(os.getcwd(), 'ru-hexlet-io-pages-recommended-books.html')
+        ansver = os.path.join(os.getcwd(), temp_path, 'ru-hexlet-io-pages-recommended-books.html')
         assert download('https://ru.hexlet.io/pages/recommended-books', temp_path) == ansver

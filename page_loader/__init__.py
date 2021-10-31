@@ -16,4 +16,10 @@ def download(url, path):
         page = requests.get(url)
         file.write(page.text)
         file.close()
-    return os.path.join(os.getcwd(), file_name)
+    return os.path.join(os.path.abspath(path), file_name)
+
+
+def folder_create(file_paht):
+    dir = os.path.splitext(file_paht)[0] + '_files'
+    if not os.path.isdir(dir):
+        os.mkdir(dir)
