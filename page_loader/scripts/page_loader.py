@@ -2,7 +2,8 @@
 
 
 from page_loader.arg_parser import arg_parser
-from page_loader import download, folder_create
+from page_loader import download
+from page_loader.download_image import download_image
 
 
 def main():
@@ -10,7 +11,7 @@ def main():
     path_dir = args.output
     url = args.url
     html_name = download(url, path_dir)
-    folder_create(html_name)
+    download_image(html_name)
     print(html_name)
 
 
